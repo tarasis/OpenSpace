@@ -1,0 +1,34 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+
+.space {
+    background-image: url("../imgs/space.png");
+    height: 100%;
+}
+
+.planet-area {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.planet {
+    position: absolute;
+    bottom: -1em;
+    width: 75%;
+}
+
+.rocket {
+    position: relative;
+    width: 20%;
+    bottom: -63%;
+    left: 40%;
+    z-index: 2;
+    transform: rotate(25deg);
+}
