@@ -32,3 +32,36 @@ body, html {
     z-index: 2;
     transform: rotate(25deg);
 }
+
+.control-panel {
+    position: absolute;
+    background-color: gray;
+    width: 25%;
+    left:50%;
+    top: 50%;
+    text-align: center;
+}
+
+.control-panel input {
+    margin: 1em auto;
+}
+
+.check-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.levers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.levers input[type="range"] {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 50%;
+ }
+
+.control-panel > button {
+    margin: 1em auto;
+}
