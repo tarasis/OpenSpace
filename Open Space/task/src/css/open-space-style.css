@@ -40,10 +40,33 @@ body, html {
     left:50%;
     top: 50%;
     text-align: center;
+
+    padding: 0.75rem;
+
+    background-color: yellow;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0,0,0,.9) 20px, rgba(0,0,0,1) 40px);
 }
 
-.control-panel input {
-    margin: 1em auto;
+.control-panel__inner {
+    background:
+            radial-gradient(black 15%, transparent 16%) 0 0,
+            radial-gradient(black 15%, transparent 16%) 8px 8px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+}
+
+.control-panel__inner input {
+    margin-top: 1rem;
+}
+
+.launchPassword, .launchSubmit {
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: darkred;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .check-buttons {
@@ -62,6 +85,12 @@ body, html {
     width: 50%;
  }
 
-.control-panel > button {
-    margin: 1em auto;
+.launchButton {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: darkred;
+    color: white;
 }
