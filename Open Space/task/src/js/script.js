@@ -63,13 +63,6 @@ function processCheckboxChange(event) {
 }
 
 function processSliderChange() {
-    // if (event.target.value === "100") {
-    //     countOfSlidersAtMax++;
-    // } else {
-        // THIS DOESN'T WORK, it breaks if you play around with the slider
-        // need a better idea, HOWEVER as just a thing to make the test pass
-        // countOfSlidersAtMax--;
-    // }
     let countOfSlidersAtMax = 0;
 
     for (slider of sliders) {
@@ -91,13 +84,15 @@ function testIfReadyForLaunch() {
 var id = null;
 
 function launchTheRocket() {
-    console.log("BOOOM! We have liftoff");
+    // console.log("BOOOM! We have liftoff");
     let theRocket = document.getElementsByClassName("rocket")[0];
+    let computedStyle = getComputedStyle(theRocket);
 
-    let startX = theRocket.x;
-    let startY = theRocket.y;
+    let startX = computedStyle.getPropertyValue("left");
+    let startY = computedStyle.getPropertyValue("bottom");
 
-    console.log("Rocket Pos: x= " + startX + " Y=" + startY);
+    startX = parseInt(startX);
+    startY = parseInt(startY);
 
     clearInterval(id);
     id = setInterval(frame, 10);
@@ -105,11 +100,8 @@ function launchTheRocket() {
         if (startX > window.innerWidth && startY > window.innerHeight) {
             clearInterval(id);
         } else {
-            startX++;
-            startY++;
-            console.log("New Pos: x= " + startX + " Y=" + startY);
-            theRocket.style.bottom = startY + 'px';
-            theRocket.style.left = startX + 'px';
+            theRocket.style.bottom = ++startY + 'px';
+            theRocket.style.left = ++startX + 'px';
         }
     }
 }
