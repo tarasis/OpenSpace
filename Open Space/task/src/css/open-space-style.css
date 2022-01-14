@@ -13,25 +13,28 @@ body, html {
 }
 
 .planet-area {
+    width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     overflow: hidden;
 }
 
 .planet {
     position: absolute;
     bottom: -1em;
-    width: 75%;
+    width: 25%;
 }
 
 .rocket {
-    position: relative;
-    width: 20%;
-    bottom: -63%;
-    left: 40%;
+    position: absolute;
+    width: 5%;
+    bottom: 33%;
+    left: 15%;
     z-index: 2;
-    transform: rotate(25deg);
+    transform: rotate(35deg);
 }
+
+
 
 .control-panel {
     position: absolute;
